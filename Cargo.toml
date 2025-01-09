@@ -1,0 +1,36 @@
+[package]
+name = "mweb"
+version = "0.1.0"
+edition = "2021"
+authors = ["yxy"]
+description = "Web utils base on Axum(Just for me)."
+
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+axum = { version = "0.8" }
+thiserror = "2"
+anyhow = "1"
+log = "0.4"
+env_logger = "0.11"
+colored = "2"
+chrono = "0.4"
+humantime = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1" }
+
+sqlx = { version = "0.8", features = [ "runtime-tokio", "tls-rustls", "sqlite" ], optional = true }
+sqlx_macro_ex = { version = "0.2", optional = true }
+
+clap = { version = "4", features = ["derive"], optional = true }
+sha256 = { version = "1", optional = true }
+regex = { version = "1", optional = true }
+once_cell = { version = "1", optional = true }
+
+
+[features]
+default = ["middle", "sqlite", "utils"]
+err = []
+middle = []
+sqlite = ["sqlx", "sqlx_macro_ex"]
+utils = ["clap", "sha256", "regex", "once_cell"]
