@@ -3,12 +3,12 @@ use std::{env, io::Write};
 use env_logger::fmt::Formatter;
 use log::Record;
 
-pub fn use_default_log_level(app_name: &str) {
+pub fn use_default_log_level() {
     if let Err(_) = env::var("RUST_LOG") {
         #[cfg(debug_assertions)]
-        env::set_var("RUST_LOG", format!("{app_name}=debug"));
+        env::set_var("RUST_LOG", "debug");
         #[cfg(not(debug_assertions))]
-        env::set_var("RUST_LOG", format!("{app_name}=info"));
+        env::set_var("RUST_LOG", "info");
     }
 }
 
