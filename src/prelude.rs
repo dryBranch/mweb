@@ -2,8 +2,6 @@ pub use log;
 pub use env_logger;
 pub use axum;
 pub use tokio;
-pub use serde;
-pub use serde_json;
 
 #[cfg(feature = "sqlx")]
 pub use sqlx;
