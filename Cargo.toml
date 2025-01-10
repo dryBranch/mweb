@@ -1,6 +1,6 @@
 [package]
 name = "mweb"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 authors = ["yxy"]
 description = "Web utils base on Axum(Just for me)."
@@ -9,11 +9,9 @@ description = "Web utils base on Axum(Just for me)."
 [dependencies]
 tokio = { version = "1", features = ["full"] }
 axum = { version = "0.8" }
-thiserror = "2"
-anyhow = "1"
 log = "0.4"
 env_logger = "0.11"
-colored = "2"
+colored = "3"
 chrono = "0.4"
 humantime = "2"
 serde = { version = "1", features = ["derive"] }
@@ -29,8 +27,8 @@ once_cell = { version = "1", optional = true }
 
 
 [features]
-default = ["middle", "sqlite", "utils"]
-err = []
+default = ["middle", "cheatsheet"]
+cheatsheet = []
 middle = []
 sqlite = ["sqlx", "sqlx_macro_ex"]
 utils = ["clap", "sha256", "regex", "once_cell"]

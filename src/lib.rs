@@ -3,10 +3,11 @@
 pub mod server;
 pub mod route;
 pub mod logger;
+pub mod time;
 #[cfg(feature = "middle")]
 pub mod middle;
-#[cfg(feature = "err")]
-pub mod err;
+#[cfg(feature = "cheatsheet")]
+pub mod cheetsheet;
 pub mod prelude;
 
 pub use server::*;

@@ -2,8 +2,6 @@ pub use log;
 pub use env_logger;
 pub use axum;
 pub use tokio;
-pub use thiserror;
-pub use anyhow;
 pub use serde;
 pub use serde_json;
 
