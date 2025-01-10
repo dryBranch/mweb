@@ -7,7 +7,7 @@ pub mod time;
 #[cfg(feature = "middle")]
 pub mod middle;
 #[cfg(feature = "cheatsheet")]
-pub mod cheetsheet;
+pub mod cheatsheet;
 pub mod prelude;
 
 pub use server::*;
